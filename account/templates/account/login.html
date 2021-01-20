@@ -1,0 +1,16 @@
+{% extends "account/main.html" %}
+
+{% block content %}
+  <h2>Login</h2>
+  {% if messages %}
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    {% endif %}
+  <form method="post" action="/">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <a href="/sign_up"><input type="button" value="SignUp"></a>
+{% endblock %}

@@ -22,3 +22,16 @@
 
 ### Additional information
     All user can see files and comments on them    
+
+### Database settings
+    if you want to use Mysql then install mysqlclient
+    then change your DATABASES in settings file like below
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'DBname',
+            'USER': 'username',
+            'PASSWORD': 'passwd',
+        }
+  }    
